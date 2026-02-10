@@ -5,6 +5,14 @@ This Docker image extends the [linuxserver/beets](https://hub.docker.com/r/linux
 - **ytimport**: Download audio from YouTube and import it into your library
 - **xtractor**: Extract low and high level musical information from your songs using Essentia
 
+## Package Versions
+
+The following plugin versions are installed:
+- beets-ytimport: 1.12.1
+- ytmusicapi: 1.11.5
+- yt-dlp: 2026.2.4
+- beets-xtractor: 0.4.2
+
 ## Building the Image
 
 ```bash

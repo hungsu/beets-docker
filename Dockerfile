@@ -1,18 +1,13 @@
 FROM lscr.io/linuxserver/beets:latest
 
-# Install ytimport plugin and its dependencies
+# Install ytimport and xtractor plugins with their dependencies
 RUN \
-  echo "**** install ytimport plugin ****" && \
+  echo "**** install plugins ****" && \
   pip install --no-cache-dir \
-    beets-ytimport \
-    ytmusicapi \
-    yt-dlp
-
-# Install xtractor plugin
-RUN \
-  echo "**** install xtractor plugin ****" && \
-  pip install --no-cache-dir \
-    beets-xtractor
+    beets-ytimport==1.12.1 \
+    ytmusicapi==1.11.5 \
+    yt-dlp==2026.2.4 \
+    beets-xtractor==0.4.2
 
 # Labels
 LABEL maintainer="hungsu"
