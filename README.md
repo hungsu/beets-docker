@@ -1,17 +1,15 @@
 # beets-docker
 Opinionated Beets in Docker form
 
-This Docker image extends the [linuxserver/beets](https://hub.docker.com/r/linuxserver/beets) base image with additional plugins:
+This Docker image extends the [linuxserver/beets](https://hub.docker.com/r/linuxserver/beets) base image with the ytimport plugin:
 - **ytimport**: Download audio from YouTube and import it into your library
-- **xtractor**: Extract low and high level musical information from your songs using Essentia
 
 ## Package Versions
 
 The following plugin versions are installed:
-- beets-ytimport: 1.12.1
+- beets-ytimport: 1.5.0 (compatible with beets 2.6.x)
 - ytmusicapi: 1.11.5
 - yt-dlp: 2026.2.4
-- beets-xtractor: 0.4.2
 
 ## Building the Image
 
@@ -60,12 +58,11 @@ docker run -d \
 
 ## Plugin Configuration
 
-To enable the plugins, add them to your beets configuration file (`/config/config.yaml`):
+To enable the ytimport plugin, add it to your beets configuration file (`/config/config.yaml`):
 
 ```yaml
 plugins:
   - ytimport
-  - xtractor
 ```
 
 ### ytimport Configuration
@@ -81,16 +78,9 @@ ytimport:
   format: bestaudio/best
 ```
 
-### xtractor Configuration
-
-For detailed xtractor configuration, see the [beets-xtractor documentation](https://github.com/adamjakab/BeetsPluginXtractor).
-
-Note: The xtractor plugin requires the Essentia extractor binary and SVM models to be installed separately.
-
 ## Installed Packages
 
-- beets
+- beets (from base image)
 - beets-ytimport
 - ytmusicapi
 - yt-dlp
-- beets-xtractor
