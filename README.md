@@ -8,8 +8,8 @@ This Docker image extends the [linuxserver/beets](https://hub.docker.com/r/linux
 
 The following plugin versions are installed:
 - beets-ytimport: 1.5.0 (compatible with beets 2.6.x)
-- ytmusicapi: latest
-- yt-dlp: latest
+- ytmusicapi: 1.11.5
+- yt-dlp: 2026.2.4
 
 ## Building the Image
 

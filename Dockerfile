@@ -5,8 +5,8 @@ RUN \
   echo "**** install plugins ****" && \
   pip install --no-cache-dir \
     beets-ytimport==1.5.0 \
-    ytmusicapi \
-    yt-dlp
+    ytmusicapi==1.11.5 \
+    yt-dlp==2026.2.4
 
 # Labels
 LABEL maintainer="hungsu"
